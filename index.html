@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amine Belalia | Bot Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-red: #ff073a;
+            --dark-bg: #0a0a0a;
+            --dark-card: #1a1a1a;
+            --text-light: #ffffff;
+            --gradient-red: linear-gradient(135deg, #ff073a 0%, #ff3864 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .neon-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 4rem;
+            background: var(--gradient-red);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 25px rgba(255, 7, 58, 0.4);
+            animation: neonPulse 2s ease-in-out infinite;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            margin: 2rem 0;
+            color: rgba(255,255,255,0.9);
+        }
+
+        section {
+            background: var(--dark-card);
+            border-radius: 15px;
+            padding: 3rem;
+            margin: 3rem 0;
+            border: 1px solid rgba(255, 7, 58, 0.1);
+            position: relative;
+        }
+
+        h2 {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--neon-red);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--neon-red);
+            box-shadow: 0 0 10px var(--neon-red);
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .experience-card {
+            background: #1a1a1a;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 7, 58, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: #1a1a1a;
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 7, 58, 0.2);
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--neon-red);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid var(--neon-red);
+            box-shadow: 0 0 15px rgba(255, 7, 58, 0.2);
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: var(--gradient-red);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 7, 58, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(255, 7, 58, 0.1);
+        }
+
+        @keyframes neonPulse {
+            0%, 100% { text-shadow: 0 0 25px rgba(255, 7, 58, 0.4); }
+            50% { text-shadow: 0 0 35px rgba(255, 7, 58, 0.6); }
+        }
+
+        @media (max-width: 768px) {
+            .neon-title {
+                font-size: 2.5rem;
+            }
+            section {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="neon-title">Amine Belalia</h1>
+            <p class="tagline">Discord & Telegram Bot Developer</p>
+            <a href="https://github.com/mohamedamine-belalia" target="_blank" class="cta-button">
+                <i class="fab fa-github"></i> GitHub Profile
+            </a>
+        </header>
+
+        <section id="expertise">
+            <h2>Technical Expertise</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>Python Development</h3>
+                    <p>4+ years experience building complex bot systems</p>
+                    <div class="tech-docs">
+                        <a href="https://docs.python.org/3/" class="cta-button" target="_blank">
+                            <i class="fas fa-book"></i> Python Docs
+                        </a>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <h3>Discord Bots</h3>
+                    <p>Specialized in community management systems</p>
+                    <div class="tech-docs">
+                        <a href="https://discordpy.readthedocs.io/" class="cta-button" target="_blank">
+                            <i class="fas fa-book"></i> Discord.py Docs
+                        </a>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <h3>Telegram Bots</h3>
+                    <p>Enterprise-grade automation solutions</p>
+                    <div class="tech-docs">
+                        <a href="https://python-telegram-bot.org/" class="cta-button" target="_blank">
+                            <i class="fas fa-book"></i> Telegram Docs
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="discord-projects">
+            <h2>Discord Projects</h2>
+            <div class="project-grid">
+                <div class="project-card" onclick="showDescription('discord1')">
+                    <img src="discord/blackjack.png" alt="Community Bot" class="project-image">
+                    <h3>Discord Blackjack Bot</h3>
+                    <p>Full Fledged Blackjack game with multiplayer!</p>
+                </div>
+
+                <div class="project-card" onclick="showDescription('discord2')">
+                    <img src="discord/aiscanner.png" alt="Gaming Bot" class="project-image">
+                    <h3>AI Eve Online Resource Scanner</h3>
+                    <p>A Discord Bot that leverages AI to scan inventory images for Eve Online players!</p>
+                </div>
+
+                <div class="project-card" onclick="showDescription('discord3')">
+                    <img src="discord/wins.png" alt="Community Bot" class="project-image">
+                    <h3>Win Scanner</h3>
+                    <p>A Discord Bot that monitors hundreds of channels for wins and broadcasts them to server members.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Contact: <a href="mailto:mohamedaminebelalia@proton.me" style="color: var(--neon-red);">mohamedaminebelalia@gmail.com</a></p>
+            <p style="margin-top: 1rem;">© 2025 Amine Belalia. All rights reserved</p>
+        </footer>
+    </div>
+
+    <script>
+        function showDescription(projectId) {
+            alert(`Showing details for ${projectId}`);
+        }
+    </script>
+</body>
+</html>
